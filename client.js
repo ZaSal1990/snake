@@ -10,15 +10,14 @@ const connect = function() {
   conn.setEncoding("utf8");
   conn.on('connect', () => {
     console.log('Successfully connected to game server');
-    conn.write('Name: ZSK');
+    conn.write('Name:ZSK');
     setInterval(() => {
       // conn.write('Move: up');
       // conn.write('Move: down');
       // conn.write('Move: down');
       // conn.write('Move: down');
     }, 500);
-    conn.write('Move: up');
-
+    
   });
   return conn;
 };
