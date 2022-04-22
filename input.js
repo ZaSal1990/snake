@@ -11,7 +11,7 @@ const setupInput = function(conn) {
   return stdin;
 };
 
-const handleUserInput = function(key) {
+const handleUserInput = function(key) { //binding movements
   if (key === '\u0003') {
     process.exit();
   } else if (key === 'w') {
@@ -22,6 +22,12 @@ const handleUserInput = function(key) {
     connection.write('Move: down');
   } else if (key === 'd') {
     connection.write('Move: right');
+  } else if (key === 'z') { //canned msgs below
+    connection.write('Say: wah?');
+  } else if (key === 'x') {
+    connection.write('Say: bro!');
+  } else if (key === 'c') {
+    connection.write('Say: wadaa?');
   }
 };
 
